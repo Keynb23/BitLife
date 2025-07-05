@@ -1,0 +1,324 @@
+/* src/app.css */
+
+/* Main Game Container */
+.game-container {
+    position: relative;
+    height: 850px; /* Fixed height */
+    width: 1000px; /* Fixed width for larger screens */
+    background: linear-gradient(to bottom right, #172e6b, #4a05b8); /* Dark blue to purple gradient */
+    color: white;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Align content to top within fixed height */
+    padding: 1rem; /* p-4 */
+    overflow-y: auto; /* Allow vertical scrolling if content exceeds height */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Game Card (Main Content Box) */
+.game-card {
+    background-color: #1f2937; /* bg-gray-800 */
+    padding: 2rem; /* p-8 */
+    border-radius: 0.75rem; /* rounded-xl */
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 10px 10px -5px rgba(0, 0, 0, 0.4); /* shadow-2xl */
+    width: 100%; /* Make it fill the container's width, respecting padding */
+    max-width: 968px; /* Max width to ensure it doesn't exceed 1000px minus padding (1000 - 2*16 = 968) */
+    border: 1px solid #1d4ed8; /* border border-blue-700 */
+    margin-bottom: 1rem; /* Add some margin at the bottom for content flow */
+}
+
+/* Game Title */
+.game-title {
+    font-size: 2.25rem; /* text-4xl */
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1.5rem; /* mb-6 */
+    color: #efd43f;     
+}
+
+/* Button Group */
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 1rem; /* space-x-4 */
+    margin-bottom: 1.5rem; /* mb-6 */
+    flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+}
+
+/* General Game Control Button Styles */
+.button-game-control {
+    color: white;
+    font-weight: bold;
+    padding: 0.5rem 1rem; /* py-2 px-4 */
+    border-radius: 0.5rem; /* rounded-lg */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2); /* shadow-md */
+    transition: all 0.3s ease-in-out; /* transition duration-300 ease-in-out */
+    transform: scale(1); /* Initial scale for hover effect */
+    border: none; /* Remove default button border */
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.button-game-control:hover {
+    transform: scale(1.05); /* hover:scale-105 */
+}
+
+/* Specific Game Control Button Colors */
+.button-new-game {
+    background-color: #16a34a; /* bg-green-600 */
+}
+.button-new-game:hover {
+    background-color: #15803d; /* hover:bg-green-700 */
+}
+
+.button-save-game {
+    background-color: #4f46e5; /* bg-indigo-600 */
+}
+.button-save-game:hover {
+    background-color: #4338ca; /* hover:bg-indigo-700 */
+}
+
+.button-load-game {
+    background-color: #9333ea; /* bg-purple-600 */
+}
+.button-load-game:hover {
+    background-color: #7e22ce; /* hover:bg-purple-700 */
+}
+
+/* Global Message Display */
+.game-message {
+    position: relative;
+    top: 5%;
+    left: 0;
+    background-color: #d09010; /* bg-yellow-700 */
+    color: white;
+    padding: 0.5rem; 
+    border-radius: 0.5rem; /* rounded-lg */
+    text-align: center;
+    margin-bottom: 1.5rem; /* mb-6 */
+    box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.2); /* shadow-inner */
+    z-index: 99;
+}
+
+/* Game Over Screen */
+.game-over-screen {
+    text-align: center;
+    margin-top: 2rem; /* mt-8 */
+}
+
+.game-over-title {
+    color: #f87171; /* text-red-400 */
+    font-size: 1.5rem; /* text-2xl */
+    font-weight: 600; /* font-semibold */
+}
+
+.game-over-text {
+    font-size: 1.125rem; /* text-lg */
+    color: #d1d5db; /* text-gray-300 */
+    margin-top: 0.5rem; /* mt-2 */
+}
+
+/* Player Stats Card */
+.player-stats-card {
+    background-color: #374151; /* bg-gray-700 */
+    padding: 1.25rem; /* p-5 */
+    border-radius: 0.5rem; /* rounded-lg */
+    margin-bottom: 1.5rem; /* mb-6 */
+    box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.2); /* shadow-inner */
+    border: 1px solid #4b5563; /* border border-gray-600 */
+}
+
+.section-title {
+    font-size: 1.5rem; /* text-2xl */
+    font-weight: 600; /* font-semibold */
+    margin-bottom: 0.75rem; /* mb-3 */
+    color: #93c5fd; /* text-blue-300 */
+}
+
+.player-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr)); /* grid-cols-2 */
+    gap: 0.5rem; /* gap-2 */
+    font-size: 1.125rem; /* text-lg */
+}
+
+/* Scenario Card */
+.scenario-card {
+    height: 250px;
+    width: 100%;
+    background-color: #374151; /* bg-gray-700 */
+    padding: 1.25rem; /* p-5 */
+    border-radius: 0.5rem; /* rounded-lg */
+    margin-bottom: 1.5rem; /* mb-6 */
+    box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.2); /* shadow-inner */
+    border: 1px solid #4b5563; /* border border-gray-600 */
+}
+
+.scenario-prompt {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #93c5fd;
+    text-align: center;
+    height: 240px;
+    width: 100%;
+}
+
+.scenario-text {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.scenario-choices-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid */
+    gap: 1rem; /* gap-4 */
+}
+
+/* Choice Button */
+.choice-button {
+    background-color: #1d4ed8; /* bg-blue-700 */
+    color: white;
+    font-weight: bold;
+    padding: 0.75rem 1rem; /* py-3 px-4 */
+    border-radius: 0.5rem; /* rounded-lg */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2); /* shadow-md */
+    transition: all 0.3s ease-in-out; /* transition duration-300 ease-in-out */
+    transform: scale(1); /* Initial scale for hover effect */
+    text-align: left;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.choice-button:hover {
+    background-color: #1e40af; /* hover:bg-blue-800 */
+    transform: scale(1.05); /* hover:scale-105 */
+}
+
+/* No Scenario / Start Game Messages */
+.no-scenario-message,
+.start-game-message {
+    text-align: center;
+    font-size: 1.25rem; /* text-xl */
+    color: #9ca3af; /* text-gray-400 */
+}
+
+/* Age Up Button */
+.age-up-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem; /* mt-6 */
+}
+
+.age-up-button {
+    background-color: #b91c1c; /* bg-red-700 */
+    color: white;
+    font-weight: bold;
+    padding: 0.75rem 1.5rem; /* py-3 px-6 */
+    border-radius: 0.5rem; /* rounded-lg */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2); /* shadow-lg */
+    transition: all 0.3s ease-in-out; /* transition duration-300 ease-in-out */
+    transform: scale(1); /* Initial scale for hover effect */
+    font-size: 1.25rem; /* text-xl */
+    border: none;
+    cursor: pointer;
+}
+
+.age-up-button:hover {
+    background-color: #991b1b; /* hover:bg-red-800 */
+    transform: scale(1.1); /* hover:scale-110 */
+}
+
+/* --- Pop-up Styles (New) --- */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* High z-index to appear on top */
+}
+
+.popup-content {
+    background-color: #1f2937; /* Dark background */
+    color: white;
+    padding: 2rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+    text-align: center;
+    max-width: 500px; /* Max width for the popup */
+    width: 90%; /* Responsive width */
+    position: relative; /* For z-index stacking context */
+    z-index: 1001; /* Even higher z-index than overlay */
+}
+
+.popup-content h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #60a5fa;
+}
+
+.popup-content p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+.popup-close-button {
+    background-color: #b91c1c;
+    color: white;
+    font-weight: bold;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.popup-close-button:hover {
+    background-color: #991b1b;
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) { /* Adjust breakpoint for fixed width containers */
+    .game-container {
+        width: 100%; /* Make it fluid on smaller screens */
+        max-width: 1000px; /* Keep max-width for consistency */
+        height: auto; /* Allow height to adjust on smaller screens */
+        min-height: 100vh; /* Ensure it takes full viewport height if content is small */
+        justify-content: center; /* Center content vertically on smaller screens */
+    }
+
+    .game-card {
+        width: calc(100% - 2rem); /* Adjust width to account for container padding */
+        max-width: 968px; /* Maintain max-width */
+    }
+
+    .game-title {
+        font-size: 2rem;
+    }
+
+    .button-game-control,
+    .choice-button,
+    .age-up-button {
+        width: 100%; /* Full width on small screens */
+        text-align: center;
+    }
+
+    .player-stats-grid {
+        grid-template-columns: 1fr; /* Single column on small screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .game-card {
+        padding: 1.5rem;
+    }
+}
