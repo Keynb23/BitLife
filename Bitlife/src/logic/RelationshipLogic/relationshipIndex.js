@@ -1,7 +1,8 @@
-// logic/relationships/index.jsx
-import { generateNPC } from '../npc/npcGenerator'; // Will be created next
-import { updateRelationship } from './relationshipManager'; 
-import { getSquadMates, updateSquadMateRelationship } from './squadMates'; // Will be created next
+// src/logic/RelationshipLogic/relationshipIndex.js
+// Assuming npcGenerator will be in src/logic/npc/npcGenerator.js for now
+import { generateNPC } from '../npc/npcGenerator';
+import { updateRelationship } from './relationshipManager';
+import { getSquadMates, updateSquadMateRelationship } from './squadMates';
 import { MAX_SQUAD_MATES } from '../constants';
 
 /**
@@ -41,7 +42,7 @@ export const initializeRelationships = (player) => {
  * @param {string} targetId - The ID of the NPC whose relationship is being updated.
  * @param {number} amount - The amount to change the relationship by.
  * @returns {Object} The updated relationships object.
- */
+*/
 export const handleRelationshipUpdate = (relationships, targetId, amount) => {
     let updatedRelationships = { ...relationships };
 

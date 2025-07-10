@@ -1,4 +1,4 @@
-// logic/utils/randomness.js
+// src/logic/Random/Randomness.js
 
 /**
  * This file provides utility functions for generating random numbers

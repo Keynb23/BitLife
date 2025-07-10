@@ -1,7 +1,7 @@
-// logic/relationships/squadMates.jsx
+// src/logic/RelationshipLogic/squadMates.jsx
 import { updateRelationship } from './relationshipManager';
-import { MAX_SQUAD_MATES } from '../constants';
-import { generateNPC } from '../npc/npcGenerator';
+import { MAX_SQUAD_MATES } from '../constants'; // Corrected path
+import { generateNPC } from '../npc/npcGenerator'; // Assuming npcGenerator will be in src/logic/npc/npcGenerator.js
 
 /**
  * This file manages the specific logic and interactions for the player's squad mates.

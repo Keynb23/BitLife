@@ -1,0 +1,69 @@
+file structure is as follows:
+
+src
+    assets
+    components
+        Scenarios
+            choiceOutcomes.js
+            GeneralScenarios.jsx
+            index.js
+            ShinobiScenarios.jsx
+        Tabs
+            Assets
+                Home
+                NinjaTools
+                userAssets.jsx
+            Jobs
+                missions
+                    KonanArcData.js
+                    missionArc.js
+                    missionGenerator.js
+                    missionOutcomes.js
+                Jobs.jsx
+            player
+                
+                Jutsu.js
+            profile
+                Legacy.jsx
+                playerStats.js
+                Profile.jsx
+            Activities.jsx
+            Relationships.jsx
+            School.jsx
+        compStyles.css(will create more css files as needed)
+    logic
+        coreLogic
+            AgeUpbtn.jsx
+            gameEvents.js
+            gameLoop.js
+            gameState.js
+            moralityCalculator.js
+            nameGenerator.js
+        Random
+            Randomness.js
+        RelationshipLogic
+            relationshipIndex.js
+            relationshipManager.js
+            squadMates.js
+        saves
+            saveLoad.js
+        constants.js
+        Death.jsx
+    Lore
+        chakra
+            chakra.jsx
+            chakraNature.jsx
+        clans
+        sageMode
+        tailedBeast
+        village
+    pages
+        Home.jsx
+        pageStyles.css
+        Settings.jsx
+    App.css
+    App.js
+    index.css
+    main.jsx
+    index.html
+    (json and config files)

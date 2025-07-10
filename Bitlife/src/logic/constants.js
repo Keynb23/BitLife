@@ -1,18 +1,20 @@
+// src/logic/constants.js
+
 export const PLAYER_INITIAL_TEMPLATE = {
     age: 0,
-    karma: 0, 
+    karma: 0,
 };
 
 export const PLAYER_STAT_RANGES = {
-    health: { min: 70, max: 100 }, // Start with a decent health range
-    happiness: { min: 50, max: 90 }, // Start with a varied happiness
-    smarts: { min: 30, max: 70 }, // Varied intelligence
-    looks: { min: 30, max: 70 }, // Varied appearance
-    money: { min: 500, max: 2000 }, // Varied starting wealth
-    karma: { min: -100, max: 100 }, // FIX: Karma range explicitly defined here
-    chakra: { min: 50, max: 90 }, // Chakra is a core stat, randomized
-    ninjutsuSkill: { min: 1, max: 10 }, // Initial range for ninjutsu
-    taijutsuSkill: { min: 1, max: 10 }, // Initial range for taijutsu
+    health: { min: 0, max: 100 }, // Adjusted min to 0 for consistency with death logic
+    happiness: { min: 0, max: 100 }, // Adjusted min/max for a full range
+    smarts: { min: 0, max: 100 },
+    looks: { min: 0, max: 100 },
+    money: { min: 0, max: Infinity }, // Money can go very high
+    morality: { min: 0, max: 100 }, // Renamed karma to morality as per App.js state
+    chakra: { min: 0, max: 100 }, // Adjusted min to 0
+    ninjutsuSkill: { min: 0, max: 100 }, // Skills from 0 to 100
+    taijutsuSkill: { min: 0, max: 100 },
 };
 
 // --- Age and Life Cycle Constants ---

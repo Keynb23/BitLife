@@ -1,6 +1,6 @@
-// logic/relationships/relationshipManager.jsx
-import { RELATIONSHIP_LEVELS, PLAYER_STAT_RANGES } from '../constants';
-import { emit, GAME_EVENTS } from '../game/gameEvents';
+// src/logic/RelationshipLogic/relationshipManager.jsx
+import { RELATIONSHIP_LEVELS } from '../constants'; // Corrected path
+import { emit, GAME_EVENTS } from '../coreLogic/gameEvents'; // Corrected path
 
 /**
  * This file manages the dynamics of relationships between the player and NPCs.

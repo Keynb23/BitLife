@@ -1,10 +1,4 @@
-// logic/core/saveLoad.jsx
-
-/**
- * This file handles saving and loading the game state.
- * For now, it uses localStorage for simplicity.
- * This can be extended to use a database like Firestore later.
- */
+// src/logic/saves/saveLoad.js
 
 const GAME_SAVE_KEY = 'narutoBitlifeSave'; // Key for localStorage
 
